@@ -1,2 +1,2 @@
 # Calculator
-My very first C++ creation
+Various calculators I've made 
