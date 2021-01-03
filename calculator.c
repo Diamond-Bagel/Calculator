@@ -50,7 +50,7 @@ int main(void)
         if (math_choice == '7') {
             isPrime();
         }
-        if (math_choice == '6')
+        else if (math_choice == '6')
         {
             printf("Enter your number: ");
             scanf("%lf", &x);
@@ -87,4 +87,3 @@ int main(void)
     } while (choice == 'y');
     return 0;
 }
-
