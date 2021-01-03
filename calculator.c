@@ -2,6 +2,37 @@
 #include <stdlib.h>
 #include <math.h>
 
+int isPrime()
+{
+    int n, i, flag = 0;
+    printf("Please enter a positive integer: \n");
+    scanf("%d", &n);
+
+    for (i = 2; i <= n / 2; ++i)
+    {
+        if (n % i == 0)
+        {
+            flag = 1;
+            break;
+        }
+    }
+    if (n == 1)
+    {
+        printf("\n1 is neither prime nor composite.\n\n");
+    }
+    else
+    {
+        if (flag == 0)
+        {
+            printf("\n%d is a prime number.\n\n", n);
+            return 0;
+        } else
+        {
+            printf("\n%d is not a prime number.\n\n", n);
+        }
+    }
+}
+
 int main(void)
 {
     double x, y;
@@ -14,8 +45,11 @@ int main(void)
 
     do
     {
-        printf("\n1)\tAdd\n2)\tSubtract\n3)\tDivide\n4)\tMultiply\n5)\tExponent\n6)\tSqrt\n\n");
+        printf("\n1)\tAdd\n2)\tSubtract\n3)\tDivide\n4)\tMultiply\n5)\tExponent\n6)\tSqrt\n7)\tCalculate Prime\n\n");
         math_choice = getch();
+        if (math_choice == '7') {
+            isPrime();
+        }
         if (math_choice == '6')
         {
             printf("Enter your number: ");
